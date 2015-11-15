@@ -48,7 +48,8 @@
             android:layout_weight="1"
             android:text="@string/a3_alignment_button_text"
             android:id="@+id/a3_alignment_button"
-            android:layout_column="1"/>
+            android:layout_column="1"
+            android:onClick="on_change_alignment"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"

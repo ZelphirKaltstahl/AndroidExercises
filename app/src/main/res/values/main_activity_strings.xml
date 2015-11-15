@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_activity_heading_text">Exercises</string>
+
+    <string name="main_activity_exercise_3_button">Exercise 3</string>
+    <string name="main_activity_exercise_4_button">Exercise 4</string>
+    <string name="main_activity_exercise_5_button">Exercise 5</string>
+    <string name="main_activity_exercise_6_button">Exercise 6</string>
+    <string name="main_activity_exercise_7_button">Exercise 7</string>
+</resources>
