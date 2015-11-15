@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.xiaolong.exercises.a3.a3_textformatting_activity;
 
@@ -22,27 +23,28 @@ public class MainActivity extends Activity {
     }
 
     public void on_exercise_3(View view) {
+        Toast.makeText(this, "Exercise 3 clicked!", Toast.LENGTH_SHORT).show();
         if(open_exercise_3_intent == null) {
             open_exercise_3_intent = new Intent(this, a3_textformatting_activity.class);
-            if(open_exercise_3_intent.resolveActivity(getPackageManager()) != null) {
-                startActivity(open_exercise_3_intent);
-            }
+        }
+        if(open_exercise_3_intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(open_exercise_3_intent);
         }
     }
 
     public void on_exercise_4(View view) {
-
+        Toast.makeText(this, "Exercise 4 clicked!", Toast.LENGTH_SHORT).show();
     }
 
     public void on_exercise_5(View view) {
-
+        Toast.makeText(this, "Exercise 5 clicked!", Toast.LENGTH_SHORT).show();
     }
 
     public void on_exercise_6(View view) {
-
+        Toast.makeText(this, "Exercise 6 clicked!", Toast.LENGTH_SHORT).show();
     }
 
     public void on_exercise_7(View view) {
-
+        Toast.makeText(this, "Exercise 7 clicked!", Toast.LENGTH_SHORT).show();
     }
 }

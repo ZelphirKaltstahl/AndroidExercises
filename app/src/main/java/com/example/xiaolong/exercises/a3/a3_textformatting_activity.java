@@ -99,9 +99,7 @@ public class a3_textformatting_activity extends Activity {
 
     private void change_alignment(Intent intent_with_data) {
         int alignment = intent_with_data.getIntExtra("gravity", Gravity.CENTER);
-        //int text_alignment = intent_with_data.getIntExtra("text_alignment", )
         formatted_textview.setGravity(alignment);
-        //formatted_textview.setTextAlignment();
     }
 
     private void change_color(Intent intent_with_data) {
