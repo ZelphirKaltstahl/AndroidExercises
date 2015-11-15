@@ -8,8 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.xiaolong.exercises.a3.a3_textformatting_activity">
-
+    tools:context="com.example.xiaolong.exercises.a3.a3_textformatting_color">
 
     <TableRow
         android:layout_width="match_parent"
@@ -18,14 +17,12 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_span="3"
             android:layout_weight="1"
+            android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/a3_formated_textview_default_text"
-            android:id="@+id/a3_formated_textview"
-            android:layout_column="0"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"/>
+            android:text="@string/a3_textformatting_color_heading_text"
+            android:id="@+id/a3_textformatting_color_heading"
+            android:layout_column="0"/>
     </TableRow>
 
     <TableRow
@@ -37,8 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/a3_color_button_text"
-            android:id="@+id/a3_color_button"
+            android:text="@string/a3_textformatting_color_red_button_text"
+            android:id="@+id/a3_textformatting_color_red_button"
             android:layout_column="0"/>
 
         <Button
@@ -46,8 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/a3_alignment_button_text"
-            android:id="@+id/a3_alignment_button"
+            android:text="@string/a3_textformatting_color_green_button_text"
+            android:id="@+id/a3_textformatting_color_green_button"
             android:layout_column="1"/>
 
         <Button
@@ -55,38 +52,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/a3_font_button_text"
-            android:id="@+id/a3_font_button"
+            android:text="@string/a3_textformatting_color_blue_button_text"
+            android:id="@+id/a3_textformatting_color_blue_button"
             android:layout_column="2"/>
     </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:id="@+id/a3_test_textview"
-            android:layout_column="0"
-            android:layout_span="3"
-            android:layout_weight="1"
-            android:text="@string/a3_test_textview_text"/>
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_span="3"
-            android:text="@string/a3_test_button_text"
-            android:id="@+id/a3_test_button"
-            android:layout_column="0"/>
-    </TableRow>
 </TableLayout>
+

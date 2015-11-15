@@ -11,4 +11,14 @@
     <string name="a3_textformatting_fontsize_small_button_text">small</string>
     <string name="a3_textformatting_fontsize_medium_button_text">medium</string>
     <string name="a3_textformatting_fontsize_large_button_text">large</string>
+
+    <string name="a3_textformatting_color_heading_text">Color</string>
+    <string name="a3_textformatting_color_red_button_text">red</string>
+    <string name="a3_textformatting_color_green_button_text">green</string>
+    <string name="a3_textformatting_color_blue_button_text">blue</string>
+
+    <string name="a3_textformatting_alignment_heading_text">Alignment</string>
+    <string name="a3_textformatting_alignment_left_button_text">left</string>
+    <string name="a3_textformatting_alignment_center_button_text">center</string>
+    <string name="a3_textformatting_alignment_right_button_text">right</string>
 </resources>

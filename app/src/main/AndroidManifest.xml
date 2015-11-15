@@ -21,6 +21,10 @@
         </activity>
         <activity android:name=".a3.a3_textformatting_fontsize" >
         </activity>
+        <activity android:name=".a3.a3_textformatting_color" >
+        </activity>
+        <activity android:name=".a3.a3_textformatting_alignment" >
+        </activity>
     </application>
 
 </manifest>
