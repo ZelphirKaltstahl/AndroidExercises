@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.xiaolong.exercises.R;
 
@@ -35,10 +36,10 @@ public class a3_textformatting_test extends Activity {
             Double.parseDouble(message);
         } catch (NumberFormatException ex) {
             result = false;
+        } finally {
+            result_intent.putExtra("is_number", result);
+            setResult(RESULT_OK, result_intent);
+            finish();
         }
-
-        result_intent.putExtra("is_number", result);
-        setResult(RESULT_OK, result_intent);
-        finish();
     }
 }

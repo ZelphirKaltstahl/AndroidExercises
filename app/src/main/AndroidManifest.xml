@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".a3.subactivities.a3_textformatting_test" >
         </activity>
+        <activity android:name=".a4.a4_showtime_showdate_activity" >
+        </activity>
     </application>
 
 </manifest>
