@@ -6,4 +6,9 @@
     <string name="a3_font_button_text">Font</string>
     <string name="a3_test_button_text">Test</string>
     <string name="a3_test_textview_text">enter text ...</string>
+
+    <string name="a3_textformatting_fontsize_heading_text">Font Size</string>
+    <string name="a3_textformatting_fontsize_small_button_text">small</string>
+    <string name="a3_textformatting_fontsize_medium_button_text">medium</string>
+    <string name="a3_textformatting_fontsize_large_button_text">large</string>
 </resources>
