@@ -15,7 +15,7 @@ public class a4_showtime_showdate_activity extends Activity {
     }
 
     public void on_show_time(View view) {
-
+        
     }
 
     public void on_show_date(View view) {

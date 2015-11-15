@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a4_showdate_showtime_heading_text">Show Date / Show Time</string>
+    <string name="a4_showdate_showtime_showdate_button_text">Show Date</string>
+    <string name="a4_showdate_showtime_showtime_button_text">Show Time</string>
+</resources>
