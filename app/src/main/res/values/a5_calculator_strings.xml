@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="a5_calculator_textview_text">0</string>
+
     <string name="a5_calculator_button_mplus_text">M+</string>
     <string name="a5_calculator_button_mminus_text">M-</string>
     <string name="a5_calculator_button_mr_text">MR</string>

@@ -15,8 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".a5.a5_calculator_activity" >
-        </activity>
         <activity android:name=".a3.a3_textformatting_activity" >
         </activity>
         <activity android:name=".a3.subactivities.a3_textformatting_fontsize" >
@@ -49,6 +47,8 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity android:name=".a5.a5_horizontal_vertical_layout" >
         </activity>
     </application>
 
