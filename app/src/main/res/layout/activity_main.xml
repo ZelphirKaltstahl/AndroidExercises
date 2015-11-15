@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/main_activity_heading_text"
-            android:id="@+id/textView2"
+            android:id="@+id/main_activity_heading"
             android:layout_column="0"/>
     </TableRow>
 
@@ -31,9 +31,10 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_activity_exercise_3_button"
-            android:id="@+id/button"
-            android:layout_column="0"/>
+            android:text="@string/main_activity_exercise_3_button_text"
+            android:id="@+id/main_activity_exercise_3_button"
+            android:layout_column="0"
+            android:onClick="on_exercise_3"/>
     </TableRow>
 
     <TableRow
@@ -44,9 +45,10 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_activity_exercise_4_button"
-            android:id="@+id/button2"
-            android:layout_column="0"/>
+            android:text="@string/main_activity_exercise_4_button_text"
+            android:id="@+id/main_activity_exercise_4_button"
+            android:layout_column="0"
+            android:onClick="on_exercise_4"/>
     </TableRow>
 
     <TableRow
@@ -57,9 +59,10 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_activity_exercise_5_button"
-            android:id="@+id/button3"
-            android:layout_column="0"/>
+            android:text="@string/main_activity_exercise_5_button_text"
+            android:id="@+id/main_activity_exercise_5_button"
+            android:layout_column="0"
+            android:onClick="on_exercise_5"/>
     </TableRow>
 
     <TableRow
@@ -70,9 +73,10 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_activity_exercise_6_button"
-            android:id="@+id/button4"
-            android:layout_column="0"/>
+            android:text="@string/main_activity_exercise_6_button_text"
+            android:id="@+id/main_activity_exercise_6_button"
+            android:layout_column="0"
+            android:onClick="on_exercise_6"/>
     </TableRow>
 
     <TableRow
@@ -83,8 +87,9 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/main_activity_exercise_7_button"
-            android:id="@+id/button5"
-            android:layout_column="0"/>
+            android:text="@string/main_activity_exercise_7_button_text"
+            android:id="@+id/main_activity_exercise_7_button"
+            android:layout_column="0"
+            android:onClick="on_exercise_7"/>
     </TableRow>
 </TableLayout>

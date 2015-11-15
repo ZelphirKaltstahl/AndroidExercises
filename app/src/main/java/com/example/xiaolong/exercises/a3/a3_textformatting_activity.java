@@ -56,28 +56,28 @@ public class a3_textformatting_activity extends Activity {
             if(request_code == MyActivity.CHOOSE_ALIGNMENT.ordinal()) {
                 Log.d(a3_textformatting_activity.LOG_TAG_MAIN_ACTIVITY, "ALIGNMENT ACTIVITY " +
                         "RETURNED");
-                //TODO
+                change_alignment(intent_with_data);
             } else if(request_code == MyActivity.CHOOSE_COLOR.ordinal()) {
                 Log.d(a3_textformatting_activity.LOG_TAG_MAIN_ACTIVITY, "COLOR ACTIVITY " +
                         "RETURNED");
-                //TODO
+                change_color(intent_with_data);
             } else if(request_code == MyActivity.CHOOSE_FONTSIZE.ordinal()) {
                 Log.d(a3_textformatting_activity.LOG_TAG_MAIN_ACTIVITY, "FONTSIZE ACTIVITY " +
                         "RETURNED");
-                //TODO
+                change_fontsize(intent_with_data);
             }
         }
     }
 
-    private void change_alignment(String alignment) {
+    private void change_alignment(Intent intent_with_data) {
 
     }
 
-    private void change_color(String color) {
+    private void change_color(Intent intent_with_data) {
 
     }
 
-    private void change_fontsize(int fontsize) {
+    private void change_fontsize(Intent intent_with_data) {
 
     }
 }
