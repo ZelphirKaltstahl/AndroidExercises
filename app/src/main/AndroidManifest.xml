@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xiaolong.uebungen" >
+    package="com.example.xiaolong.exercises" >
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalculatorActivity" >
+        <activity android:name=".a5.a5_calculator_activity" >
+        </activity>
+        <activity android:name=".a3.a3_textformatting_activity" >
+        </activity>
+        <activity android:name=".a3.a3_textformatting_fontsize" >
         </activity>
     </application>
 

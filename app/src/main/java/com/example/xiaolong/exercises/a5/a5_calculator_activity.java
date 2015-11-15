@@ -1,10 +1,11 @@
-package com.example.xiaolong.uebungen;
+package com.example.xiaolong.exercises.a5;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CalculatorActivity extends Activity {
+import com.example.xiaolong.exercises.R;
+
+public class a5_calculator_activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

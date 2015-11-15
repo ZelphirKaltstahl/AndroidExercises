@@ -1,4 +1,4 @@
-package com.example.xiaolong.uebungen;
+package com.example.xiaolong.exercises;
 
 import org.junit.Test;
 

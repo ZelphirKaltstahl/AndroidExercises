@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a3_formated_textview_default_text">Hello World!</string>
+    <string name="a3_color_button_text">Color</string>
+    <string name="a3_alignment_button_text">Alignment</string>
+    <string name="a3_font_button_text">Font</string>
+    <string name="a3_test_button_text">Test</string>
+    <string name="a3_test_textview_text">enter text ...</string>
+</resources>

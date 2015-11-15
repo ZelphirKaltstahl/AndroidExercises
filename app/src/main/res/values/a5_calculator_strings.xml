@@ -7,4 +7,16 @@
 
     <string name="a5_calculator_button_c_text">C</string>
 
+    <string name="a5_calculator_button_1_text">1</string>
+    <string name="a5_calculator_button_2_text">2</string>
+    <string name="a5_calculator_button_3_text">3</string>
+    <string name="a5_calculator_button_4_text">4</string>
+    <string name="a5_calculator_button_5_text">5</string>
+    <string name="a5_calculator_button_6_text">6</string>
+    <string name="a5_calculator_button_7_text">7</string>
+    <string name="a5_calculator_button_8_text">8</string>
+    <string name="a5_calculator_button_9_text">9</string>
+    <string name="a5_calculator_button_0_text">0</string>
+    <string name="a5_calculator_button_equals_text">=</string>
+
 </resources>
