@@ -20,7 +20,7 @@ public class a3_textformatting_alignment extends Activity {
 
     public void on_left(View view) {
         Intent response_intent = new Intent();
-        response_intent.putExtra("gravity", Gravity.LEFT);
+        response_intent.putExtra("gravity", Gravity.START);
         setResult(RESULT_OK, response_intent);
         finish();
     }
@@ -34,7 +34,7 @@ public class a3_textformatting_alignment extends Activity {
 
     public void on_right(View view) {
         Intent response_intent = new Intent();
-        response_intent.putExtra("gravity", Gravity.RIGHT);
+        response_intent.putExtra("gravity", Gravity.END);
         setResult(RESULT_OK, response_intent);
         finish();
     }
