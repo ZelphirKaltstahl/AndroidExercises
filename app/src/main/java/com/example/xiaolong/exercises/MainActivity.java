@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.xiaolong.exercises.a3.a3_textformatting_activity;
+import com.example.xiaolong.exercises.a4.a4_showtime_showdate_activity;
 
 public class MainActivity extends Activity {
 
@@ -32,6 +33,10 @@ public class MainActivity extends Activity {
 
     public void on_exercise_4(View view) {
         Toast.makeText(this, "Exercise 4 clicked!", Toast.LENGTH_SHORT).show();
+        if(open_exercise_4_intent == null) {
+            open_exercise_4_intent = new Intent(this, a4_showtime_showdate_activity.class);
+        }
+        startActivity(open_exercise_4_intent);
     }
 
     public void on_exercise_5(View view) {
