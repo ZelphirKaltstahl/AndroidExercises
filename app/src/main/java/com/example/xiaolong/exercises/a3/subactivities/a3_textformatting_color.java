@@ -1,17 +1,14 @@
-package com.example.xiaolong.exercises.a3;
+package com.example.xiaolong.exercises.a3.subactivities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.xiaolong.exercises.R;
 
 public class a3_textformatting_color extends Activity {
-
-    public static final String RED = "red";
-    public static final String GREEN = "green";
-    public static final String BLUE = "blue";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,21 +18,21 @@ public class a3_textformatting_color extends Activity {
 
     public void on_red(View view) {
         Intent response_intent = new Intent();
-        response_intent.putExtra("color", a3_textformatting_color.RED);
+        response_intent.putExtra("color", Color.RED);
         setResult(RESULT_OK, response_intent);
         finish();
     }
 
     public void on_green(View view) {
         Intent response_intent = new Intent();
-        response_intent.putExtra("color", a3_textformatting_color.GREEN);
+        response_intent.putExtra("color", Color.GREEN);
         setResult(RESULT_OK, response_intent);
         finish();
     }
 
     public void on_blue(View view) {
         Intent response_intent = new Intent();
-        response_intent.putExtra("color", a3_textformatting_color.BLUE);
+        response_intent.putExtra("color", Color.BLUE);
         setResult(RESULT_OK, response_intent);
         finish();
     }

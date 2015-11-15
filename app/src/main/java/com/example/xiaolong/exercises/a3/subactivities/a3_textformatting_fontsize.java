@@ -1,4 +1,4 @@
-package com.example.xiaolong.exercises.a3;
+package com.example.xiaolong.exercises.a3.subactivities;
 
 import android.app.Activity;
 import android.os.Bundle;
