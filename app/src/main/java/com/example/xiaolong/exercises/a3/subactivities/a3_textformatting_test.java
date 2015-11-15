@@ -33,7 +33,7 @@ public class a3_textformatting_test extends Activity {
         boolean result = true;
         try {
             Double.parseDouble(message);
-        } catch (Exception ex) {
+        } catch (NumberFormatException ex) {
             result = false;
         }
 

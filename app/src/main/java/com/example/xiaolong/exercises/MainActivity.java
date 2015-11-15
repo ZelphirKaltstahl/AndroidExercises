@@ -27,9 +27,7 @@ public class MainActivity extends Activity {
         if(open_exercise_3_intent == null) {
             open_exercise_3_intent = new Intent(this, a3_textformatting_activity.class);
         }
-        if(open_exercise_3_intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(open_exercise_3_intent);
-        }
+        startActivity(open_exercise_3_intent);
     }
 
     public void on_exercise_4(View view) {
