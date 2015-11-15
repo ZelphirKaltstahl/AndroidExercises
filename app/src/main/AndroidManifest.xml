@@ -19,11 +19,13 @@
         </activity>
         <activity android:name=".a3.a3_textformatting_activity" >
         </activity>
-        <activity android:name=".a3.a3_textformatting_fontsize" >
+        <activity android:name=".a3.subactivities.a3_textformatting_fontsize" >
         </activity>
-        <activity android:name=".a3.a3_textformatting_color" >
+        <activity android:name=".a3.subactivities.a3_textformatting_color" >
         </activity>
-        <activity android:name=".a3.a3_textformatting_alignment" >
+        <activity android:name=".a3.subactivities.a3_textformatting_alignment" >
+        </activity>
+        <activity android:name=".a3.subactivities.a3_textformatting_test" >
         </activity>
     </application>
 

@@ -21,4 +21,7 @@
     <string name="a3_textformatting_alignment_left_button_text">left</string>
     <string name="a3_textformatting_alignment_center_button_text">center</string>
     <string name="a3_textformatting_alignment_right_button_text">right</string>
+
+    <string name="a3_textformatting_test_is_number_button_text">is number</string>
+    <string name="a3_textformatting_test_is_empty_button_text">is empty</string>
 </resources>

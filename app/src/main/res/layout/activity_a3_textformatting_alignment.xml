@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.xiaolong.exercises.a3.a3_textformatting_alignment">
+    tools:context="com.example.xiaolong.exercises.a3.subactivities.a3_textformatting_alignment">
 
     <TableRow
         android:layout_width="match_parent"
@@ -36,7 +36,8 @@
             android:layout_weight="1"
             android:text="@string/a3_textformatting_alignment_left_button_text"
             android:id="@+id/a3_textformatting_alignment_left_button"
-            android:layout_column="0"/>
+            android:layout_column="0"
+            android:onClick="on_left"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -45,7 +46,8 @@
             android:layout_weight="1"
             android:text="@string/a3_textformatting_alignment_center_button_text"
             android:id="@+id/a3_textformatting_alignment_center_button"
-            android:layout_column="1"/>
+            android:layout_column="1"
+            android:onClick="on_center"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -54,7 +56,8 @@
             android:layout_weight="1"
             android:text="@string/a3_textformatting_alignment_right_button_text"
             android:id="@+id/a3_textformatting_alignment_right_button"
-            android:layout_column="2"/>
+            android:layout_column="2"
+            android:onClick="on_right"/>
     </TableRow>
 </TableLayout>
 

@@ -6,5 +6,6 @@ package com.example.xiaolong.exercises;
 public enum MyActivity {
     CHOOSE_COLOR,
     CHOOSE_ALIGNMENT,
-    CHOOSE_FONTSIZE;
+    CHOOSE_FONTSIZE,
+    CHOOSE_TEST;
 }
