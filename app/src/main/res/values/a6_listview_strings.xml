@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="a6_listview_heading_text">ListView Demo</string>
+    <string name="a6_listview_add_button_text">Add</string>
 </resources>
