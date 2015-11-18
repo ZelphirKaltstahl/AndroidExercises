@@ -31,7 +31,7 @@ public class a6_listview_activity extends Activity {
 
     public void on_add(View view) {
         if (open_calculator_intent == null) {
-            open_calculator_intent = new Intent(this, a6_listview_activity.class);
+            open_calculator_intent = new Intent(this, a_calculator.class);
         }
         startActivityForResult(open_calculator_intent, MyActivity.ENTER_EQUATION.ordinal());
     }
