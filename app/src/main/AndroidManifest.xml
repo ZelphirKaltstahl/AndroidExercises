@@ -52,6 +52,8 @@
         </activity>
         <activity android:name=".a6.a6_listview_activity" >
         </activity>
+        <activity android:name=".a6.a_calculator" >
+        </activity>
     </application>
 
 </manifest>

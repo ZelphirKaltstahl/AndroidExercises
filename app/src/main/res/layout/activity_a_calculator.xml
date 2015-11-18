@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.xiaolong.exercises.a5.a5_horizontal_vertical_layout_activity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/a5_calculator_textview_text"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:id="@+id/a5_calculator_textview"/>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="24px"
+                android:layout_weight="0.20"
+                android:text="@string/a5_calculator_button_mplus_text"
+                android:id="@+id/a5_calculator_button_mplus"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="24px"
+                android:layout_weight="0.20"
+                android:text="@string/a5_calculator_button_mminus_text"
+                android:id="@+id/a5_calculator_button_mminus"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="24px"
+                android:layout_weight="0.20"
+                android:text="@string/a5_calculator_button_mr_text"
+                android:id="@+id/a5_calculator_button_mr"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="24px"
+                android:layout_weight="0.20"
+                android:text="@string/a5_calculator_button_mc_text"
+                android:id="@+id/a5_calculator_button_mc"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="24px"
+                android:layout_weight="0.20"
+                android:text="@string/a5_calculator_button_c_text"
+                android:id="@+id/a5_calculator_button_c"
+                android:onClick="on_clear"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_1_text"
+                android:id="@+id/a5_calculator_button_1"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_2_text"
+                android:id="@+id/a5_calculator_button_2"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_3_text"
+                android:id="@+id/a5_calculator_button_3"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_4_text"
+                android:id="@+id/a5_calculator_button_4"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_5_text"
+                android:id="@+id/a5_calculator_button_5"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_6_text"
+                android:id="@+id/a5_calculator_button_6"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_7_text"
+                android:id="@+id/a5_calculator_button_7"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_8_text"
+                android:id="@+id/a5_calculator_button_8"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_9_text"
+                android:id="@+id/a5_calculator_button_9"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_0_text"
+                android:id="@+id/a5_calculator_button_0"
+                android:onClick="on_number"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:text="@string/a5_calculator_button_dot_text"
+                android:id="@+id/a5_calculator_button_equals"
+                android:onClick="on_equals"/>
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:rowCount="4">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_plus_text"
+                android:id="@+id/a5_calculator_button_plus"
+                android:onClick="on_operation"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_minus_text"
+                android:id="@+id/a5_calculator_button_minus"
+                android:onClick="on_operation"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_multiply_text"
+                android:id="@+id/a5_calculator_button_multiply"
+                android:onClick="on_operation"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a5_calculator_button_divide_text"
+                android:id="@+id/a5_calculator_button_divide"
+                android:onClick="on_operation"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/a5_calculator_button_equals_text"
+        android:id="@+id/button3"/>
+
+</LinearLayout>

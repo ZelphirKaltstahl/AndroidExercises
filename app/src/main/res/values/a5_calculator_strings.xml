@@ -21,6 +21,13 @@
     <string name="a5_calculator_button_0_text">0</string>
     <string name="a5_calculator_button_dot_text">.</string>
 
+    <string name="a5_calculator_button_func1_text">Func1</string>
+    <string name="a5_calculator_button_func2_text">Func2</string>
+    <string name="a5_calculator_button_func3_text">Func3</string>
+    <string name="a5_calculator_button_func4_text">Func4</string>
+    <string name="a5_calculator_button_func5_text">Func5</string>
+    <string name="a5_calculator_button_func6_text">Func6</string>
+
     <string name="a5_calculator_button_equals_text">=</string>
 
     <string name="a5_calculator_button_plus_text">+</string>
