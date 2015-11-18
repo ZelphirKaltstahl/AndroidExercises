@@ -11,20 +11,27 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.xiaolong.exercises.MyActivity;
 import com.example.xiaolong.exercises.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class a6_listview_activity extends Activity {
 
     private static final String LISTVIEW_ACTIVITY_LOG_TAG = "LISTVIEW";
 
+    private HashMap<String, Boolean> existing_map = new HashMap<>();
     private ArrayList<String> list_of_strings = new ArrayList<>();
     private ListView equations_listview;
     private ArrayAdapter<String> listview_adapter;
     private Intent open_calculator_intent;
+
+
+    // WORKAROUND BECAUSE OF ANDROID BUGS
+    private TextView selected_listview_item = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +44,43 @@ public class a6_listview_activity extends Activity {
         equations_listview.setAdapter(listview_adapter);
 
         registerForContextMenu(equations_listview);
+
+        equations_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "ListItem " + view + " at " + position + " clicked!");
+                toggle_selection(view);
+                selected_listview_item = (TextView) view;
+            }
+        });
     }
 
+    /**
+     * One day this function might just work!
+     * @param view
+     */
+    private void toggle_selection(View view) {
+        if(view.isSelected()) {
+            view.setSelected(false);
+            equations_listview.clearChoices();
+        } else {
+            view.setSelected(true);
+        }
+    }
+
+    public void on_calc(View view) {
+        if (selected_listview_item != null) {
+            Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "Selected View is: " + equations_listview.getSelectedView());
+            Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "Selected View is: " + selected_listview_item);
+            String equation_string = selected_listview_item.getText().toString();
+            Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "String in selected view is: " + selected_listview_item.getText().toString());
+
+            Intent open_calculator_with_equation_intent = new Intent(this, a_calculator.class);
+            open_calculator_with_equation_intent.putExtra(a_calculator.SINGLE_EQUATION_EXTRA_STRING, equation_string);
+
+            startActivityForResult(open_calculator_with_equation_intent, MyActivity.ENTER_EQUATION.ordinal());
+        }
+    }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -63,6 +105,10 @@ public class a6_listview_activity extends Activity {
 
 
     public void on_add(View view) {
+        open_calculator_activity();
+    }
+
+    private void open_calculator_activity() {
         if (open_calculator_intent == null) {
             open_calculator_intent = new Intent(this, a_calculator.class);
         }
@@ -81,11 +127,11 @@ public class a6_listview_activity extends Activity {
                     if(intent_with_data.hasExtra(a_calculator.EQUATIONS_EXTRA_STRING)) {
                         Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "intent has required extra, now adding it to listview adapter");
                         String[] equations_data = intent_with_data.getStringArrayExtra(a_calculator.EQUATIONS_EXTRA_STRING);
-                        if (equations_data.length == 1 && equations_data[0].equals("")) {
-                            // do nothing
-                        } else {
+                        if (equations_data != null) {
                             for (String equation : intent_with_data.getStringArrayExtra(a_calculator.EQUATIONS_EXTRA_STRING)) {
+                                Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "received:" + equation);
                                 add_listview_item(equation);
+                                selected_listview_item = null;
                             }
                         }
                     }
@@ -95,15 +141,14 @@ public class a6_listview_activity extends Activity {
     }
 
     private void add_listview_item(String item) {
-        while (listview_adapter.getCount() >= 15) {
-            String last_item = listview_adapter.getItem(listview_adapter.getCount()-1);
-            listview_adapter.remove(last_item);
+        if(!existing_map.containsKey(item)) {
+            while (listview_adapter.getCount() >= 15) {
+                String last_item = listview_adapter.getItem(listview_adapter.getCount() - 1);
+                listview_adapter.remove(last_item);
+            }
+            list_of_strings.add(0, item);
+            existing_map.put(item, new Boolean(true));
+            listview_adapter.notifyDataSetChanged();
         }
-        list_of_strings.add(0, item);
-        listview_adapter.notifyDataSetChanged();
-    }
-
-    public void on_long_click(View view) {
-
     }
 }

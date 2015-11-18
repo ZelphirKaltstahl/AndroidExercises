@@ -31,6 +31,14 @@
             android:id="@+id/a6_listview_add_button"
             android:layout_gravity="center_vertical|end"
             android:onClick="on_add"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a6_listview_calc_button_text"
+            android:id="@+id/a6_listview_calc_button"
+            android:layout_gravity="center_vertical|end"
+            android:onClick="on_calc"/>
     </LinearLayout>
 
         <ListView
@@ -39,7 +47,7 @@
             android:id="@+id/a6_listview_listview"
             android:choiceMode="singleChoice"
             android:longClickable="true"
-            />
+            android:listSelector="@android:color/holo_blue_dark"/>
 
 </LinearLayout>
 

@@ -78,6 +78,7 @@
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="4pt"
             android:columnCount="3"
             android:rowCount="4">
 

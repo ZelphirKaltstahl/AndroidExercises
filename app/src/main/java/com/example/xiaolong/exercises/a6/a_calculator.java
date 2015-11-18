@@ -12,13 +12,15 @@ import com.example.xiaolong.exercises.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 public class a_calculator extends Activity {
 
     private ArrayList<String> equations = new ArrayList<>();
 
     private static final String CALCULATOR_LOG_TAG = "CALCULATOR";
-    public static final String EQUATIONS_EXTRA_STRING = "equation";
+    public static final String EQUATIONS_EXTRA_STRING = "equations";
+    public static final String SINGLE_EQUATION_EXTRA_STRING = "equation";
 
     private String current_text = "";
     private boolean last_input_was_operator = false;
@@ -39,7 +41,42 @@ public class a_calculator extends Activity {
 
         fill_operation_action_map();
 
+        Intent initial_intent = getIntent();
+
         input_output_textview = (TextView) findViewById(R.id.a5_calculator_textview);
+
+        if(initial_intent.hasExtra(a_calculator.SINGLE_EQUATION_EXTRA_STRING)) {
+            String equation_string = initial_intent.getStringExtra(a_calculator.SINGLE_EQUATION_EXTRA_STRING);
+            Log.d(a_calculator.CALCULATOR_LOG_TAG, "Intent carries for key: " + a_calculator.SINGLE_EQUATION_EXTRA_STRING + " data: " + equation_string);
+            insert_equation(equation_string);
+        }
+
+    }
+
+    private void insert_equation(String equation_string) {
+        String[] equation_elements = equation_string.split(" ", -1);
+        for(String elem : equation_elements) {
+            Log.d(a_calculator.CALCULATOR_LOG_TAG, "element:" + elem);
+        }
+
+        first_number = equation_elements[0];
+        try {
+            last_operation = CalculationOperation.get_operation_by_string(equation_elements[1]);
+        } catch (UnknownCalculationOperationException e) {
+            e.printStackTrace();
+        }
+
+        reset();
+        first_number = equation_elements[0];
+        try {
+            last_operation = CalculationOperation.get_operation_by_string(equation_elements[1]);
+        } catch (UnknownCalculationOperationException e) {
+            e.printStackTrace();
+        }
+        last_number = equation_elements[2];
+        current_text = equation_elements[4];
+
+        input_output_textview.setText(equation_elements[0] + equation_elements[1] + equation_elements[2] + "=" + equation_elements[4]);
     }
 
     private void fill_operation_action_map() {
@@ -95,12 +132,8 @@ public class a_calculator extends Activity {
 
     public void on_decimal_dot(View view) {
         Log.d(a_calculator.CALCULATOR_LOG_TAG, "received decimal dot");
-        if (last_input_was_operator) {
-            // do nothing
-        } else {
-            if (current_text.contains(".")) {
-                // do nothing
-            } else {
+        if (!last_input_was_operator) {
+            if (!current_text.contains(".")) {
                 add_symbol_to_input_output_textview(".");
             }
         }
@@ -137,11 +170,21 @@ public class a_calculator extends Activity {
 
     public void on_equals(View view) {
         Log.d(a_calculator.CALCULATOR_LOG_TAG, "received equals");
-        double result = calculate();
-        equations.add(first_number + last_operation.toString() + last_number + "=" + result);
-        reset();
-        first_number = Double.toString(result);
-        input_output_textview.setText(Double.toString(result));
+
+        Log.d(a_calculator.CALCULATOR_LOG_TAG, "first number is " + first_number);
+        Log.d(a_calculator.CALCULATOR_LOG_TAG, "last operation is " + last_operation);
+        Log.d(a_calculator.CALCULATOR_LOG_TAG, "last number is " + last_number);
+
+        if(!first_number.equals("") && !last_number.equals("") && last_operation != null) {
+            double result = calculate();
+            equations.add(first_number + " " + last_operation.toString() + " " + last_number + " = " + result);
+            reset();
+            first_number = Double.toString(result);
+            input_output_textview.setText(Double.toString(result));
+        }
+        for(String equation : equations) {
+            Log.d(a_calculator.CALCULATOR_LOG_TAG, equation);
+        }
     }
 
     public void on_submit(View view) {
@@ -153,7 +196,6 @@ public class a_calculator extends Activity {
             finish();
         } else {
             Intent response_intent = new Intent();
-            response_intent.putExtra(a_calculator.EQUATIONS_EXTRA_STRING, "");
             setResult(RESULT_OK, response_intent);
             finish();
         }
