@@ -1,9 +1,11 @@
 package com.example.xiaolong.exercises.a5;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class a5_horizontal_vertical_layout extends AppCompatActivity {
+import com.example.xiaolong.exercises.R;
+
+public class a5_horizontal_vertical_layout extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
