@@ -33,3 +33,6 @@ local.properties
 
 # Android Studio captures folder
 captures/
+
+# lock files
+*.lock

@@ -14,6 +14,8 @@ import java.util.HashMap;
 
 public class a_calculator extends Activity {
 
+    public static final String EQUATION_EXTRA_STRING = "equation";
+
     private String current_text;
     private boolean last_input_was_operator = false;
 
@@ -111,11 +113,13 @@ public class a_calculator extends Activity {
     }
 
     public void on_equals(View view) {
-        Intent response_intent = new Intent();
-        String equation_string = first_number + last_operation.toString() + last_number + "=" + calculate();
-        response_intent.putExtra("equation", equation_string);
-        setResult(RESULT_OK, response_intent);
-        finish();
+        if (first_number != "" && last_number != "" && last_operation != null) {
+            Intent response_intent = new Intent();
+            String equation_string = first_number + last_operation.toString() + last_number + "=" + calculate();
+            response_intent.putExtra(a_calculator.EQUATION_EXTRA_STRING, equation_string);
+            setResult(RESULT_OK, response_intent);
+            finish();
+        }
     }
 
     private double calculate() {

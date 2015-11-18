@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:text="@string/a6_listview_add_button_text"
             android:id="@+id/a6_listview_add_button"
-            android:layout_gravity="center_vertical|end"/>
+            android:layout_gravity="center_vertical|end"
+            android:onClick="on_add"/>
     </LinearLayout>
 
         <ListView

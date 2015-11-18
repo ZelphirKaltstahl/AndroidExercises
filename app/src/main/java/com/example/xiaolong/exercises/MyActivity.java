@@ -7,5 +7,6 @@ public enum MyActivity {
     CHOOSE_COLOR,
     CHOOSE_ALIGNMENT,
     CHOOSE_FONTSIZE,
-    CHOOSE_TEST;
+    CHOOSE_TEST,
+    ENTER_EQUATION;
 }
