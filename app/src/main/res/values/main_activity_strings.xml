@@ -6,5 +6,5 @@
     <string name="main_activity_exercise_4_button_text">Exercise 4 – Multiscreen, Intents</string>
     <string name="main_activity_exercise_5_button_text">Exercise 5 – Portrait / Landscape</string>
     <string name="main_activity_exercise_6_button_text">Exercise 6 – ListView and Calculator</string>
-    <string name="main_activity_exercise_7_button_text">Exercise 7</string>
+    <string name="main_activity_exercise_7_button_text">Exercise 7 – Intents</string>
 </resources>
