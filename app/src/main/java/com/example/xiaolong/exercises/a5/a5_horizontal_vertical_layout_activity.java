@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.xiaolong.exercises.R;
 
-public class a5_horizontal_vertical_layout extends Activity {
+public class a5_horizontal_vertical_layout_activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

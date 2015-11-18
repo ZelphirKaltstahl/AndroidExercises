@@ -48,7 +48,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".a5.a5_horizontal_vertical_layout" >
+        <activity android:name=".a5.a5_horizontal_vertical_layout_activity" >
         </activity>
     </application>
 
