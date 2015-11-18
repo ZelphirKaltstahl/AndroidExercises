@@ -205,4 +205,11 @@
         android:id="@+id/a5_calculator_button_equals"
         android:onClick="on_equals"/>
 
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/a6_calculator_return_button_text"
+        android:id="@+id/a6_calculator_return_button"
+        android:onClick="on_submit"/>
+
 </LinearLayout>

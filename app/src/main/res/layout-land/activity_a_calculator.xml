@@ -249,7 +249,7 @@
             android:layout_height="fill_parent"
             android:layout_gravity="end"
             android:columnCount="2"
-            android:rowCount="3">
+            android:rowCount="4">
 
             <Button
                 android:layout_width="wrap_content"
@@ -304,6 +304,16 @@
                 android:minWidth="22pt"
                 android:text="@string/a5_calculator_button_func6_text"
                 android:id="@+id/a5_calculator_button_func6"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:minHeight="22pt"
+                android:minWidth="22pt"
+                android:text="@string/a6_calculator_return_button_text"
+                android:id="@+id/a6_calculator_return_button"
+                android:onClick="on_submit"/>
 
 
         </GridLayout>

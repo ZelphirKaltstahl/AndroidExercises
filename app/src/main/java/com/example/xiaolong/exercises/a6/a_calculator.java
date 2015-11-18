@@ -4,19 +4,21 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.xiaolong.exercises.R;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class a_calculator extends Activity {
 
+    private ArrayList<String> equations = new ArrayList<>();
+
     private static final String CALCULATOR_LOG_TAG = "CALCULATOR";
-    public static final String EQUATION_EXTRA_STRING = "equation";
+    public static final String EQUATIONS_EXTRA_STRING = "equation";
 
     private String current_text = "";
     private boolean last_input_was_operator = false;
@@ -120,6 +122,10 @@ public class a_calculator extends Activity {
 
     public void on_clear(View view) {
         Log.d(a_calculator.CALCULATOR_LOG_TAG, "received clear command");
+        reset();
+    }
+
+    private void reset() {
         first_number = "";
         last_number = "";
         last_operation = null;
@@ -131,10 +137,23 @@ public class a_calculator extends Activity {
 
     public void on_equals(View view) {
         Log.d(a_calculator.CALCULATOR_LOG_TAG, "received equals");
-        if (!first_number.equals("") && !last_number.equals("") && last_operation != null) {
+        double result = calculate();
+        equations.add(first_number + last_operation.toString() + last_number + "=" + result);
+        reset();
+        first_number = Double.toString(result);
+        input_output_textview.setText(Double.toString(result));
+    }
+
+    public void on_submit(View view) {
+        if (!equations.isEmpty()) {
             Intent response_intent = new Intent();
-            String equation_string = first_number + last_operation.toString() + last_number + "=" + calculate();
-            response_intent.putExtra(a_calculator.EQUATION_EXTRA_STRING, equation_string);
+            String[] list = new String[equations.size()];
+            response_intent.putExtra(a_calculator.EQUATIONS_EXTRA_STRING, equations.toArray(list));
+            setResult(RESULT_OK, response_intent);
+            finish();
+        } else {
+            Intent response_intent = new Intent();
+            response_intent.putExtra(a_calculator.EQUATIONS_EXTRA_STRING, "");
             setResult(RESULT_OK, response_intent);
             finish();
         }

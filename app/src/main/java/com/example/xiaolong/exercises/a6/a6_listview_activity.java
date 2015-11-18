@@ -78,9 +78,16 @@ public class a6_listview_activity extends Activity {
                 Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "checking who responded");
                 if(requestCode == MyActivity.ENTER_EQUATION.ordinal()) {
                     Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "calculator responded");
-                    if(intent_with_data.hasExtra(a_calculator.EQUATION_EXTRA_STRING)) {
+                    if(intent_with_data.hasExtra(a_calculator.EQUATIONS_EXTRA_STRING)) {
                         Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "intent has required extra, now adding it to listview adapter");
-                        add_listview_item(intent_with_data.getStringExtra(a_calculator.EQUATION_EXTRA_STRING));
+                        String[] equations_data = intent_with_data.getStringArrayExtra(a_calculator.EQUATIONS_EXTRA_STRING);
+                        if (equations_data.length == 1 && equations_data[0].equals("")) {
+                            // do nothing
+                        } else {
+                            for (String equation : intent_with_data.getStringArrayExtra(a_calculator.EQUATIONS_EXTRA_STRING)) {
+                                add_listview_item(equation);
+                            }
+                        }
                     }
                 }
             }
