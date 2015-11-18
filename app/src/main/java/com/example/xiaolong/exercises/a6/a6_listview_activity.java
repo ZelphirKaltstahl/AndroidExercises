@@ -17,6 +17,7 @@ public class a6_listview_activity extends Activity {
 
     private static final String LISTVIEW_ACTIVITY_LOG_TAG = "LISTVIEW";
 
+    private ArrayList<String> list_of_strings = new ArrayList<>();
     private ListView equations_listview;
     private ArrayAdapter<String> listview_adapter;
     private Intent open_calculator_intent;
@@ -26,9 +27,11 @@ public class a6_listview_activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a6_listview_activity);
 
+        list_of_strings.add("Test Entry");
+        listview_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list_of_strings);
         equations_listview = (ListView) findViewById(R.id.a6_listview_listview);
         equations_listview.setAdapter(listview_adapter);
-        listview_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+
     }
 
     public void on_add(View view) {
@@ -50,6 +53,9 @@ public class a6_listview_activity extends Activity {
                     if(intent_with_data.hasExtra(a_calculator.EQUATION_EXTRA_STRING)) {
                         Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "intent has required extra, now adding it to listview adapter");
                         listview_adapter.add(intent_with_data.getStringExtra(a_calculator.EQUATION_EXTRA_STRING));
+                        for(int i = 0; i < listview_adapter.getCount(); i++) {
+                            Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, listview_adapter.getItem(i));
+                        }
                     }
                 }
             }
