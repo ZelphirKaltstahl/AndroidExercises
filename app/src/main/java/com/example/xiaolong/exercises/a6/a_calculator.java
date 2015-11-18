@@ -76,8 +76,13 @@ public class a_calculator extends Activity {
             last_number += input;
             Log.d(a_calculator.CALCULATOR_LOG_TAG, "Adding " + input + " to last_number.");
         } else {
-            first_number += input;
-            Log.d(a_calculator.CALCULATOR_LOG_TAG, "Adding " + input + " to first_number.");
+            if (last_number.equals("")) {
+                first_number += input;
+                Log.d(a_calculator.CALCULATOR_LOG_TAG, "Adding " + input + " to first_number.");
+            } else {
+                last_number += input;
+                Log.d(a_calculator.CALCULATOR_LOG_TAG, "Adding " + input + " to last_number.");
+            }
         }
 
         add_symbol_to_input_output_textview(input);

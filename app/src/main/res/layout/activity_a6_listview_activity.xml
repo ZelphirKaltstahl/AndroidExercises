@@ -37,7 +37,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/a6_listview_listview"
-            android:choiceMode="singleChoice"/>
+            android:choiceMode="singleChoice"
+            android:longClickable="true"
+            />
 
 </LinearLayout>
 

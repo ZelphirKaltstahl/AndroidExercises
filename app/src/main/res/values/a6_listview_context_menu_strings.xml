@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a6_listview_context_menu_clear_list_item_text">clear list</string>
+    <string name="a6_listview_context_menu_do_nothing_item_text">do nothing</string>
+</resources>

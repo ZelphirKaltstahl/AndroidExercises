@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/a6_listview_context_menu_clear_list_item"
+          android:title="@string/a6_listview_context_menu_clear_list_item_text"/>
+    <item android:id="@+id/a6_listview_context_menu_do_nothing_item"
+          android:title="@string/a6_listview_context_menu_do_nothing_item_text"/>
+</menu>

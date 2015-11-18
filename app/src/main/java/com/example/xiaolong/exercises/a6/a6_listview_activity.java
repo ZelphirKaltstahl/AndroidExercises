@@ -4,7 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -32,7 +36,31 @@ public class a6_listview_activity extends Activity {
         equations_listview = (ListView) findViewById(R.id.a6_listview_listview);
         equations_listview.setAdapter(listview_adapter);
 
+        registerForContextMenu(equations_listview);
     }
+
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case R.id.a6_listview_context_menu_clear_list_item:
+                listview_adapter.clear();
+                return true;
+            case R.id.a6_listview_context_menu_do_nothing_item:
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
 
     public void on_add(View view) {
         if (open_calculator_intent == null) {
@@ -52,13 +80,23 @@ public class a6_listview_activity extends Activity {
                     Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "calculator responded");
                     if(intent_with_data.hasExtra(a_calculator.EQUATION_EXTRA_STRING)) {
                         Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "intent has required extra, now adding it to listview adapter");
-                        listview_adapter.add(intent_with_data.getStringExtra(a_calculator.EQUATION_EXTRA_STRING));
-                        for(int i = 0; i < listview_adapter.getCount(); i++) {
-                            Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, listview_adapter.getItem(i));
-                        }
+                        add_listview_item(intent_with_data.getStringExtra(a_calculator.EQUATION_EXTRA_STRING));
                     }
                 }
             }
         }
+    }
+
+    private void add_listview_item(String item) {
+        while (listview_adapter.getCount() >= 15) {
+            String last_item = listview_adapter.getItem(listview_adapter.getCount()-1);
+            listview_adapter.remove(last_item);
+        }
+        list_of_strings.add(0, item);
+        listview_adapter.notifyDataSetChanged();
+    }
+
+    public void on_long_click(View view) {
+
     }
 }
