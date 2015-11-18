@@ -156,8 +156,8 @@
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
                 android:text="@string/a5_calculator_button_dot_text"
-                android:id="@+id/a5_calculator_button_equals"
-                android:onClick="on_equals"/>
+                android:id="@+id/a5_calculator_button_dot"
+                android:onClick="on_decimal_dot"/>
         </GridLayout>
 
         <GridLayout
@@ -202,6 +202,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/a5_calculator_button_equals_text"
-        android:id="@+id/button3"/>
+        android:id="@+id/a5_calculator_button_equals"
+        android:onClick="on_equals"/>
 
 </LinearLayout>
