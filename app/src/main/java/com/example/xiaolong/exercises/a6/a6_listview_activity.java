@@ -3,6 +3,7 @@ package com.example.xiaolong.exercises.a6;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -13,6 +14,8 @@ import com.example.xiaolong.exercises.R;
 import java.util.ArrayList;
 
 public class a6_listview_activity extends Activity {
+
+    private static final String LISTVIEW_ACTIVITY_LOG_TAG = "LISTVIEW";
 
     private ListView equations_listview;
     private ArrayAdapter<String> listview_adapter;
@@ -40,10 +43,12 @@ public class a6_listview_activity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent_with_data) {
         if (resultCode == RESULT_OK) {
             if (intent_with_data == null) {
-                // do nothing
+                Log.d(a6_listview_activity.LISTVIEW_ACTIVITY_LOG_TAG, "intent didn't carry data");
             } else {
-                if(intent_with_data.hasExtra(a_calculator.EQUATION_EXTRA_STRING)) {
-                    list_of_equation_strings.add(intent_with_data.getStringExtra(a_calculator.EQUATION_EXTRA_STRING));
+                if(requestCode == MyActivity.ENTER_EQUATION.ordinal()) {
+                    if(intent_with_data.hasExtra(a_calculator.EQUATION_EXTRA_STRING)) {
+                        listview_adapter.add(intent_with_data.getStringExtra(a_calculator.EQUATION_EXTRA_STRING));
+                    }
                 }
             }
         }
