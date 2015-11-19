@@ -2,7 +2,7 @@
 <resources>
     <string name="a7_intents_google_button_text">Google</string>
     <string name="a7_intents_google_with_query_button_text">Google with query</string>
-    <string name="a7_intents_google_maps_button_text">Google Maps TH</string>
+    <string name="a7_intents_google_maps_button_text">Google Maps TH Wildau</string>
     <string name="a7_intents_show_contact_button_text">show contact</string>
     <string name="a7_intents_edit_contact_button_text">edit contact</string>
     <string name="a7_intents_show_phone_number_button_text">show phone number</string>
@@ -12,4 +12,6 @@
     <string name="a7_intents_send_email_button_text">send email</string>
     <string name="a7_intents_send_sms_button_text">send sms</string>
     <string name="a7_intents_inspect_other_activity_button_text">inspect other activity</string>
+
+    <string name="a7_intents_heading_text">Intents</string>
 </resources>

@@ -10,6 +10,7 @@ import com.example.xiaolong.exercises.a3.a3_textformatting_activity;
 import com.example.xiaolong.exercises.a4.a4_showtime_showdate_activity;
 import com.example.xiaolong.exercises.a5.a5_horizontal_vertical_layout_activity;
 import com.example.xiaolong.exercises.a6.a6_listview_activity;
+import com.example.xiaolong.exercises.a7.a7_intents;
 
 public class MainActivity extends Activity {
 
@@ -59,5 +60,9 @@ public class MainActivity extends Activity {
 
     public void on_exercise_7(View view) {
         Toast.makeText(this, "Exercise 7 clicked!", Toast.LENGTH_SHORT).show();
+        if(open_exercise_7_intent == null) {
+            open_exercise_7_intent = new Intent(this, a7_intents.class);
+        }
+        startActivity(open_exercise_7_intent);
     }
 }

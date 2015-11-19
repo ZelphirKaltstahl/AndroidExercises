@@ -11,29 +11,106 @@
     android:orientation="vertical"
     tools:context="com.example.xiaolong.exercises.a7.a7_intents">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/a7_intents_heading_text"
+        android:id="@+id/textView3"/>
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView3"/>
+                android:text="@string/a7_intents_google_button_text"
+                android:id="@+id/a7_intents_google_button"
+                android:onClick="on_google"/>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button4"/>
+                android:text="@string/a7_intents_google_with_query_button_text"
+                android:id="@+id/a7_intents_google_with_query_button"
+                android:onClick="on_google_with_query"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_google_maps_button_text"
+                android:id="@+id/a7_intents_google_maps_button"
+                android:onClick="on_google_maps_with_query"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_show_contact_button_text"
+                android:id="@+id/a7_intents_show_contact_button"
+                android:onClick="on_show_contact"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_edit_contact_button_text"
+                android:id="@+id/a7_intents_edit_contact_button"
+                android:onClick="on_edit_contact"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_show_phone_number_button_text"
+                android:id="@+id/a7_intents_show_phone_number_button"
+                android:onClick="on_show_phone_number"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_call_phone_number_button_text"
+                android:id="@+id/a7_intents_call_phone_number_button"
+                android:onClick="on_call_phone_number"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_set_alarm_button_text"
+                android:id="@+id/a7_intents_set_alarm_button"
+                android:onClick="on_set_alarm"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_set_calendar_event_button_text"
+                android:id="@+id/a7_intents_set_calendar_event_button"
+                android:onClick="on_create_calendar_event"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_send_email_button_text"
+                android:id="@+id/a7_intents_send_email_button"
+                android:onClick="on_send_email"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_send_sms_button_text"
+                android:id="@+id/a7_intents_send_sms_button"
+                android:onClick="on_send_sms"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_inspect_other_activity_button_text"
+                android:id="@+id/a7_intents_inspect_other_activity_button"
+                android:onClick="on_inspect_other_activity"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
