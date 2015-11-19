@@ -101,6 +101,20 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/a7_intents_show_email_button_text"
+                android:id="@+id/a7_intents_show_email_button"
+                android:onClick="on_show_email"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/a7_intents_show_sms_button_text"
+                android:id="@+id/a7_intents_show_sms_button"
+                android:onClick="on_show_sms"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/a7_intents_send_sms_button_text"
                 android:id="@+id/a7_intents_send_sms_button"
                 android:onClick="on_send_sms"/>

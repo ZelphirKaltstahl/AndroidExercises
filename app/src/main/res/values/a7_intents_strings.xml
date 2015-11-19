@@ -10,6 +10,8 @@
     <string name="a7_intents_set_alarm_button_text">set alarm</string>
     <string name="a7_intents_set_calendar_event_button_text">set calendar event</string>
     <string name="a7_intents_send_email_button_text">send email</string>
+    <string name="a7_intents_show_email_button_text">show email</string>
+    <string name="a7_intents_show_sms_button_text">show sms</string>
     <string name="a7_intents_send_sms_button_text">send sms</string>
     <string name="a7_intents_inspect_other_activity_button_text">inspect other activity</string>
 
