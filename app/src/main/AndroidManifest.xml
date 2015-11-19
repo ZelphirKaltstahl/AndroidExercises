@@ -54,6 +54,8 @@
         </activity>
         <activity android:name=".a6.a_calculator" >
         </activity>
+        <activity android:name=".a7.a7_intents" >
+        </activity>
     </application>
 
 </manifest>
