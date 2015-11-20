@@ -67,6 +67,8 @@
         </activity>
         <activity android:name=".a8.a8_shared_preferences" >
         </activity>
+        <activity android:name=".a8.a8b_sqlite_db" >
+        </activity>
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@ import com.example.xiaolong.exercises.a4.a4_showtime_showdate_activity;
 import com.example.xiaolong.exercises.a5.a5_horizontal_vertical_layout_activity;
 import com.example.xiaolong.exercises.a6.a6_listview_activity;
 import com.example.xiaolong.exercises.a7.a7_intents;
-import com.example.xiaolong.exercises.a8.a8_shared_preferences;
+import com.example.xiaolong.exercises.a8.a8a_shared_preferences;
 
 public class MainActivity extends Activity {
 
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
     public void on_exercise_8(View view) {
         Toast.makeText(this, "Exercise 8 clicked!", Toast.LENGTH_SHORT).show();
         if(open_exercise_8_intent == null) {
-            open_exercise_8_intent = new Intent(this, a8_shared_preferences.class);
+            open_exercise_8_intent = new Intent(this, a8a_shared_preferences.class);
         }
         startActivity(open_exercise_8_intent);
     }
