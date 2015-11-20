@@ -69,6 +69,8 @@
         </activity>
         <activity android:name=".a8.a8b_sqlite_db" >
         </activity>
+        <activity android:name=".a8.a8c_sd_card" >
+        </activity>
     </application>
 
 </manifest>

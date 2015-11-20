@@ -12,6 +12,7 @@ import com.example.xiaolong.exercises.a5.a5_horizontal_vertical_layout_activity;
 import com.example.xiaolong.exercises.a6.a6_listview_activity;
 import com.example.xiaolong.exercises.a7.a7_intents;
 import com.example.xiaolong.exercises.a8.a8a_shared_preferences;
+import com.example.xiaolong.exercises.a8.a8b_sqlite_db;
 
 public class MainActivity extends Activity {
 
@@ -20,7 +21,8 @@ public class MainActivity extends Activity {
     private Intent open_exercise_5_intent;
     private Intent open_exercise_6_intent;
     private Intent open_exercise_7_intent;
-    private Intent open_exercise_8_intent;
+    private Intent open_exercise_8a_shared_preferences_intent;
+    private Intent open_exercise_8b_sqlite_db_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,11 +70,19 @@ public class MainActivity extends Activity {
         startActivity(open_exercise_7_intent);
     }
 
-    public void on_exercise_8(View view) {
+    public void on_exercise_8a(View view) {
         Toast.makeText(this, "Exercise 8 clicked!", Toast.LENGTH_SHORT).show();
-        if(open_exercise_8_intent == null) {
-            open_exercise_8_intent = new Intent(this, a8a_shared_preferences.class);
+        if(open_exercise_8a_shared_preferences_intent == null) {
+            open_exercise_8a_shared_preferences_intent = new Intent(this, a8a_shared_preferences.class);
         }
-        startActivity(open_exercise_8_intent);
+        startActivity(open_exercise_8a_shared_preferences_intent);
+    }
+
+    public void on_exercise_8b(View view) {
+        Toast.makeText(this, "Exercise 8 clicked!", Toast.LENGTH_SHORT).show();
+        if(open_exercise_8b_sqlite_db_intent == null) {
+            open_exercise_8b_sqlite_db_intent = new Intent(this, a8b_sqlite_db.class);
+        }
+        startActivity(open_exercise_8b_sqlite_db_intent);
     }
 }
